@@ -2,6 +2,7 @@
 
 :root {
   --clr-bg: #ffffff;
+  --text-color: black;
   --clr-tweet: #1a8cd8;
   --clr-text-secondary: #e7e7e8;
   --clr-text-primary: #0f1419;
@@ -19,10 +20,17 @@
 }
 body {
   background-color: var(--clr-bg);
+  color: var(--text-color);
   font-family: "Open-sans", sans-serif;
 }
+.change-theme {
+  --clr-bg: rgb(41, 39, 39);
+  --text-color: white;
+  --clr-text-secondary: #201f1f;
+  --clr-text-primary: #e7e7e8;
+}
 .container {
-  display: flex;
+  display: none;
   flex-direction: row;
   width: 100%;
   height: 100%;
@@ -131,6 +139,8 @@ li:hover span {
   margin-left: 1rem;
   font-size: 1.3rem;
   width: 100%;
+  padding: 0.2rem 0.2rem;
+  margin-bottom: 0.3rem;
 }
 .tweet-footer {
   display: flex;
@@ -196,7 +206,7 @@ li:hover span {
 .post .desc {
   font-size: 1rem;
   font-weight: 300;
-  color: #1c1c1d;
+  color: var(--clr-text-primary);
 }
 .post-desc .feature-image {
   padding: 1rem 0;
@@ -328,8 +338,6 @@ li:hover span {
   .sidebar .tweet-button {
     display: none;
   }
-  .sidebar .logo {
-  }
   .tweet-footer div {
     padding: 0;
     gap: 0.3rem;
@@ -342,5 +350,98 @@ li:hover span {
   }
   .trends {
     display: none;
+  }
+
+  .posts .post {
+    gap: 0.3rem;
+  }
+}
+
+/* style for register page */
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  background: rgb(131, 35, 191);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 35, 191, 1) 51%,
+    rgba(222, 0, 255, 1) 52%
+  );
+}
+
+.register-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.register-form .one-input {
+  padding: 1rem;
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.register-form input {
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  width: 100%;
+}
+.register-form svg {
+  width: 3rem;
+  height: 3rem;
+}
+.register-form .choose-file {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  padding: 1rem;
+}
+.register-form .submit-button {
+  width: 100%;
+}
+.register-form .submit {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #1a8cd8;
+  transition: all 0.3s ease;
+  color: white;
+  border: none;
+}
+
+.register-form .submit:hover {
+  background-color: #146499;
+}
+
+.liked {
+  animation: showliked 2s ease;
+  background-color: red;
+}
+
+.change-like {
+  font-size: 25px;
+  color: red;
+}
+
+@keyframes showliked {
+  from {
+    font-size: 1rem;
+    width: 1rem;
+  }
+  to {
+    font-size: 3rem;
+    width: 5rem;
   }
 }

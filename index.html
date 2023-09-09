@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/73305de8fb.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js" defer></script>
     <title>Twitter ui design</title>
   </head>
   <body>
@@ -31,139 +32,35 @@
       <section class="posts">
         <div class="post-header">
             <h2>Home</h2>
-            <i class="fa-solid fa-star-and-crescent"></i>
+            <i  class="fa-solid fa-star-and-crescent  theme-color"></i>
         </div>
-        <div class="tweet">
-            <div class="tweet-head">
-                <img src="my-profile.jpg" alt="user pic">
-                <input type="text" class="tweet-input" placeholder="What's happening ?">
-            </div>
-            <div class="tweet-footer">
-              <div>
-                <input type="file" id="image">
-                <label for="image">
-                    <i class="fa-solid fa-image"></i>
-                </label>
-                <label for="image">
-                    <i class="fa-solid fa-cloud"></i>
-                </label>
-                <label for="image">
-                    <i class="fa-solid fa-heart"></i>
-                </label>
-                <label for="image">
-                    <i class="fa-solid fa-face-smile"></i>
-                </label>
-              </div>
-                <button>Tweet</button>
-            </div>
-        </div>
-        <div class="posts">
-            <div class="post">
-                <div class="post-image">
-                    <img src="my-profile.jpg" alt="Profile">
+        <form action="" class="tweet-form">
+            <div class="tweet">
+                <div class="tweet-head">
+                    <img  class="input-pic" alt="user pic">
+                    <input type="text" class="tweet-input" placeholder="What's happening ?">
                 </div>
-                <div class="post-desc">
-                    <div class="name">Shohag <span> @bengalbyte .3m</span></div>
-                    <p class="desc">How many people are learning computer programming</p>
-                   <div class="feature-image">
-                    <img src="programming.jpg" alt="post-image">
-                   </div>
-                    <div class="post-icon">
-                        <div>
-                            <i class="fa-solid fa-heart"></i>
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-comment"></i>
-                            <span>2</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-hashtag"></i>
-                           
-                        </div>
-                        <div><i class="fa-solid fa-share-from-square"></i></div>
-                        <div>
-                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                         
-                        </div>
-                    </div>
-                </div>
-                <div class="angal-icon">
-                    <i class="fa-solid fa-chevron-down"></i>
+                <div class="tweet-footer">
+                  <div>
+                    <input type="file" id="image">
+                    <label for="image">
+                        <i class="fa-solid fa-image"></i>
+                    </label>
+                    <label for="image">
+                        <i class="fa-solid fa-cloud"></i>
+                    </label>
+                    <label for="image">
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+                    <label for="image">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </label>
+                  </div>
+                    <button>Tweet</button>
                 </div>
             </div>
-            <div class="post">
-                <div class="post-image">
-                    <img src="my-profile.jpg" alt="Profile">
-                </div>
-                <div class="post-desc">
-                    <div class="name">Shohag <span> @bengalbyte .8m</span></div>
-                    <p class="desc">we are learning web development</p>
-                   <div class="feature-image">
-                    <img src="webd.jpg" alt="post-image">
-                   </div>
-                    <div class="post-icon">
-                        <div>
-                            <i class="fa-solid fa-heart"></i>
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-comment"></i>
-                            <span>2</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-hashtag"></i>
-                           
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-share-from-square"></i>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                         
-                        </div>
-                    </div>
-                </div>
-                <div class="angal-icon">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-            </div>
-            <div class="post">
-                <div class="post-image">
-                    <img src="my-profile.jpg" alt="Profile">
-                </div>
-                <div class="post-desc">
-                    <div class="name">Shohag <span> @bengalbyte .8m</span></div>
-                    <p class="desc">we are learning web development</p>
-                   <div class="feature-image">
-                    <img src="webd.jpg" alt="post-image">
-                   </div>
-                    <div class="post-icon">
-                        <div>
-                            <i class="fa-solid fa-heart"></i>
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-comment"></i>
-                            <span>2</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-hashtag"></i>
-                           
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-share-from-square"></i>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                         
-                        </div>
-                    </div>
-                </div>
-                <div class="angal-icon">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-            </div>
+        </form>
+        <div class="posts-container">       
         </div>
       </section>
       <section class="trends">
@@ -227,6 +124,31 @@
             <button class="show-more">Show More</button>
         </div>
       </section>
+    </div>
+    <div class="register">
+        <form action="" class="register-form">
+            <h1>Create Account</h1>
+            <div class="one-input">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="profile-name" name="" placeholder="enter your name" id="">
+            </div>
+            <div class="one-input">
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" class="company-name" placeholder="enter your company name">
+            </div>
+            <h4>Add Your Profile Image</h4>
+           <div class="choose-file">
+                <label for="file">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                      </svg>
+                </label>
+                <input id="file" class="register-file" placeholder="profile pic" type="file">   
+            </div>
+            <div class="submit-button">
+             <input type="submit" class="submit"> 
+            </div>          
+        </form>
     </div>
   </body>
 </html>
